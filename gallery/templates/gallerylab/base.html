@@ -1,4 +1,4 @@
-{% load bootstrap3 %}
+{% load bootstrap4 %}
 {% load static%}
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,16 @@
   </head>
   <body>
 
-    {% block content %} <h1>Working</h1> {%endblock%}
+    {% include "navbar.html" %}
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-9">
+          {% block content %} <h1>Working</h1> {%endblock%}
+        </div>
+      </div>
+    </div>
 
     {% block scripts %}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
