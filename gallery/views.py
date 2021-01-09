@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def landing(request):
     return render(request, 'landing.html')
+
+def gallery_page(request):
+    return render(request, 'gallerylab/gallery.html')    
