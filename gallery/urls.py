@@ -4,6 +4,5 @@ from . import views
 import gallery
 
 urlpatterns=[
-    path('',views.landing,name='landing'),
-    path('gallery/', views.gallery_page, name='gallery_page'),
+    path('', views.gallery_page, name='gallery_page'),
 ]
