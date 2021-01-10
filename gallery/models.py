@@ -68,5 +68,9 @@ class Image(models.Model):
 
     @classmethod
     def filter_by_location(cls, search_term):
-        results = cls.objects.filter(location__icontains=search_term)
-        return results                         
+        if search_term=='Tanzania':
+            return cls.objects.filter(location = 2)
+        elif search_term=='Uganda':
+            return cls.objects.filter(location = 3) 
+        else: 
+            return cls.objects.filter(location = 1)                                 
