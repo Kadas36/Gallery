@@ -8,12 +8,22 @@
       <div class="imgContainer">
         {% for image in images %}
           <div class="">
-            <img src="{{image.url}}" class="img-responsive myImg" alt="{{image}}" id="img{{image.id}}">
+            <img src="{{image.url}}" class="img-responsive myImg" alt="{{image.description}}" id="img{{image.id}}">
           </div>
         {% endfor %}
       </div>  
     </div>
+
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+      <div id="url"></div>
+    </div>
   </div>
+  {% block scripts %}
+    <script src={% static 'js/main.js'%} defer></script>
+  {% endblock %}
 
 {% endblock %}
 
