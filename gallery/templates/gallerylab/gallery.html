@@ -5,11 +5,13 @@
 
   <div class="container my-4">
     <div class="row">
+      <div class="imgContainer">
         {% for image in images %}
           <div class="">
-            <img src="{{image.url}}" class="img-responsive myImg" alt="Image" id="img{{image.id}}">
+            <img src="{{image.url}}" class="img-responsive myImg" alt="{{image}}" id="img{{image.id}}">
           </div>
         {% endfor %}
+      </div>  
     </div>
   </div>
 
