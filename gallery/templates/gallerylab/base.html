@@ -44,7 +44,14 @@
           </div>
         </div>
         <div class="col-md-10">
-          {% block content %} {%endblock%}
+          {% block content %}
+          
+          <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+          {%endblock%}
         </div>
       </div>
     </div>
@@ -52,6 +59,7 @@
     {% block scripts %}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       {% bootstrap_javascript %}
+      <script src={% static 'js/main.js'%} defer></script>
     {% endblock %}
   </body>
 </html>
