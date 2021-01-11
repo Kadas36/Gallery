@@ -29,20 +29,18 @@
               <h6>Locations</h6>
               <hr>
             </div>
-            {% for image in images %}
             <div class="sideblock">
-              <a href="{{image.location}}">Kenya</a>
+              <a href="{% url 'gallery_page' %}">Kenya</a>
               <hr>
             </div>
             <div class="sideblock">
-              <a href="{{image.location}}">Uganda</a>
+              <a href="{% url 'gallery_page' %}">Uganda</a>
               <hr>
             </div>
             <div class="sideblock">
-              <a href="{{image.location}}">Tanzania</a>
+              <a href="{% url 'gallery_page' %}">Tanzania</a>
               <hr>
             </div>
-            {% endfor %}
           </div>
         </div>
         <div class="col-md-10">

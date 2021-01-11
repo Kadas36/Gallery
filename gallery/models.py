@@ -14,6 +14,17 @@ class location(models.Model):
 
     def save_location(self):
         self.save()
+        
+    def delete_location(self):
+        self.delete()
+
+    @classmethod
+    def get_all_locations(cls):
+        return location.objects.all()    
+        
+    @classmethod
+    def update_location(cls, id, value):
+        cls.objects.filter(id=id).update(name = value)    
        
 
 class Category(models.Model):
@@ -27,6 +38,14 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
+
+    def get_all_categories(cls):
+        categories = cls.objects.all()
+        return categories
+
+    @classmethod
+    def delete_category(cls,category):
+        cls.objects.filter(category=category).delete()    
     
 
 class Image(models.Model):
