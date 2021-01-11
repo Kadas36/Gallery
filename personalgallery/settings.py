@@ -81,14 +81,21 @@ WSGI_APPLICATION = 'personalgallery.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# production
+# DATABASES = {
+#         'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'gallery',
+#         'USER': 'moringa',
+#         'PASSWORD':'kadas36',
+#     }
+# }
+
 DATABASES = {
-        'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
-        'USER': 'moringa',
-        'PASSWORD':'kadas36',
-    }
-}
+       'default': dj_database_url.config(
+           default=config('DATABASE_URL')
+       )
+   }
 
 
 # Password validation
